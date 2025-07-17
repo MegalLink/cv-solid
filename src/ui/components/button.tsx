@@ -1,0 +1,50 @@
+import type { Component, ComponentProps } from "solid-js";
+import { splitProps } from "solid-js";
+import { Button as ButtonPrimitive } from "@kobalte/core/button";
+import { tv, type VariantProps } from "tailwind-variants";
+import { cn } from "../lib/utils";
+
+const buttonVariants = tv({
+  base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+  variants: {
+    variant: {
+      default: "bg-primary text-primary-foreground hover:bg-primary/90",
+      destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+      outline: "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
+      secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      ghost: "hover:bg-accent hover:text-accent-foreground",
+      link: "underline-offset-4 hover:underline text-primary",
+    },
+    size: {
+      default: "h-10 py-2 px-4",
+      sm: "h-9 px-3 rounded-md",
+      lg: "h-11 px-8 rounded-md",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+    size: "default",
+  },
+});
+
+export interface ButtonProps
+  extends ComponentProps<typeof ButtonPrimitive>,
+    VariantProps<typeof buttonVariants> {}
+
+/**
+ * Button component with theme variants and dark mode support
+ */
+const Button: Component<ButtonProps> = (props) => {
+  const [local, rest] = splitProps(props, ["class", "variant", "size"]);
+  return (
+    <ButtonPrimitive
+      class={cn(
+        buttonVariants({ variant: local.variant, size: local.size }),
+        local.class
+      )}
+      {...rest}
+    />
+  );
+};
+
+export { Button, buttonVariants };
