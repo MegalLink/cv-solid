@@ -1,16 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portafolio profesional con diseño moderno y responsivo">
+    
+    <!-- Preload de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Vite + Solid + TS</title>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" as="image" href="/src/assets/images/light.avif">
+    <link rel="preload" as="image" href="/src/assets/images/dark.avif">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    
+    <!-- Título -->
+    <title>Portafolio Profesional</title>
+    
+    <!-- Estilos críticos en línea -->
+    <style>
+      /* Estilos críticos aquí */
+      .loading-spinner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--color-background, #ffffff);
+        z-index: 9999;
+      }
+    </style>
   </head>
   <body>
+    <!-- Pantalla de carga inicial -->
+    <div id="loading" class="loading-spinner">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+    </div>
+    
+    <!-- Contenedor principal -->
     <div id="root"></div>
+    
+    <!-- Scripts -->
+    <script>
+      // Eliminar pantalla de carga cuando la aplicación esté lista
+      window.addEventListener('load', function() {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          setTimeout(() => {
+            loading.style.opacity = '0';
+            setTimeout(() => loading.remove(), 300);
+          }, 300);
+        }
+      });
+    </script>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
