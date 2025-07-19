@@ -1,6 +1,7 @@
 import { Button } from "../ui/components/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/components/card";
 import { Briefcase, Code, Database, Palette } from "lucide-solid";
+import SkillCard from "../ui/components/skillscard";
 
 const Home = () => {
   return (
@@ -18,22 +19,26 @@ const Home = () => {
       <section class="w-full max-w-5xl mt-16">
         <h2 class="text-3xl font-bold text-foreground mb-8">Key Skills</h2>
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-8">
-          <div class="bg-secondary p-6 rounded-lg text-center flex flex-col items-center gap-4">
-            <Palette class="w-8 h-8 text-secondary-foreground" />
-            <h3 class="text-xl font-semibold text-secondary-foreground">UI/UX Design</h3>
-          </div>
-          <div class="bg-secondary p-6 rounded-lg text-center flex flex-col items-center gap-4">
-            <Code class="w-8 h-8 text-secondary-foreground" />
-            <h3 class="text-xl font-semibold text-secondary-foreground">Frontend Dev</h3>
-          </div>
-          <div class="bg-secondary p-6 rounded-lg text-center flex flex-col items-center gap-4">
-            <Briefcase class="w-8 h-8 text-secondary-foreground" />
-            <h3 class="text-xl font-semibold text-secondary-foreground">Backend Dev</h3>
-          </div>
-          <div class="bg-secondary p-6 rounded-lg text-center flex flex-col items-center gap-4">
-            <Database class="w-8 h-8 text-secondary-foreground" />
-            <h3 class="text-xl font-semibold text-secondary-foreground">Databases</h3>
-          </div>
+          <SkillCard 
+            icon={<Palette class="w-12 h-12 text-secondary-foreground" />} 
+            title="UI/UX Design" 
+            skills={["Figma", "Adobe XD", "User Research"]} 
+          />
+          <SkillCard 
+            icon={<Code class="w-12 h-12 text-secondary-foreground" />} 
+            title="Frontend Dev" 
+            skills={["ReactJS", "SolidJS", "VueJS", "TailwindCSS"]} 
+          />
+          <SkillCard 
+            icon={<Briefcase class="w-12 h-12 text-secondary-foreground" />} 
+            title="Backend Dev" 
+            skills={["Node.js", "Express", "NestJS", "GraphQL"]} 
+          />
+          <SkillCard 
+            icon={<Database class="w-12 h-12 text-secondary-foreground" />} 
+            title="Databases" 
+            skills={["PostgreSQL", "MongoDB", "MySQL", "Redis"]} 
+          />
         </div>
       </section>
 
