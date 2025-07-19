@@ -13,6 +13,10 @@
   --color-background: #FFFFFF;  /* Pure white */
   --color-foreground: #1F2937;  /* Dark gray for text */
   --color-border: #E5E7EB;  /* Light gray border */
+
+  /* Neumorphism Shadows */
+  --shadow-light: rgba(255, 255, 255, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -28,4 +32,28 @@
   --color-background: #0F172A;  /* Deep navy blue */
   --color-foreground: #E2E8F0;  /* Light gray for text */
   --color-border: #334155;  /* Darker gray border */
+
+  /* Neumorphism Shadows */
+  --shadow-light: rgba(255, 255, 255, 0.123);
+  --shadow-dark: rgb(0, 0, 0,0.6);
 }
+
+.shadow-neumorphic {
+  box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.neumorphic {
+  background-color: var(--color-background);
+  box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.neumorphic-inset {
+  background-color: var(--color-background);
+  box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+

@@ -13,31 +13,35 @@ const Home = () => {
         <p class="text-lg md:text-xl text-foreground/80 mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <Button size="lg">Contact Me</Button>
+        <Button variant="default" size="lg">Contact Me</Button>
       </header>
 
       <section class="w-full max-w-5xl mt-16">
         <h2 class="text-3xl font-bold text-foreground mb-8">Key Skills</h2>
         <div class="grid grid-cols-2 xl:grid-cols-4 gap-8">
           <SkillCard 
-            icon={<Palette class="w-12 h-12 text-secondary-foreground" />} 
+            icon={<Palette class="w-12 h-12 text-primary" />} 
             title="UI/UX Design" 
             skills={["Figma", "Adobe XD", "User Research"]} 
+            textColorClass="text-primary"
           />
           <SkillCard 
-            icon={<Code class="w-12 h-12 text-secondary-foreground" />} 
+            icon={<Code class="w-12 h-12 text-secondary" />} 
             title="Frontend Dev" 
             skills={["ReactJS", "SolidJS", "VueJS", "TailwindCSS"]} 
+            textColorClass="text-secondary"
           />
           <SkillCard 
-            icon={<Briefcase class="w-12 h-12 text-secondary-foreground" />} 
+            icon={<Briefcase class="w-12 h-12 text-accent" />} 
             title="Backend Dev" 
             skills={["Node.js", "Express", "NestJS", "GraphQL"]} 
+            textColorClass="text-accent"
           />
           <SkillCard 
-            icon={<Database class="w-12 h-12 text-secondary-foreground" />} 
+            icon={<Database class="w-12 h-12 text-destructive" />} 
             title="Databases" 
             skills={["PostgreSQL", "MongoDB", "MySQL", "Redis"]} 
+            textColorClass="text-destructive"
           />
         </div>
       </section>

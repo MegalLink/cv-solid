@@ -8,11 +8,11 @@ import DesktopNav from "./ui/components/desktopnav";
 function App() {
   const location = useLocation();
   return (
-    <div class="min-h-screen bg-background text-foreground pb-20 md:pb-0">
+    <div class="min-h-screen bg-background text-foreground pb-20 md:pb-0 font-sans">
       <div class="container mx-auto h-full md:h-screen md:py-8">
                 <div class="flex flex-col md:flex-row gap-8 md:items-stretch md:h-full">
           <Sidebar />
-                                                  <main class="flex-1 w-full bg-card p-4 md:p-8 rounded-2xl shadow-lg md:relative">
+                                                  <main class="flex-1 w-full p-4 md:p-8 rounded-2xl md:relative neumorphic">
             {/* Mobile View: Simple scrollable container */}
             <div class="block md:hidden overflow-y-auto">
               <Outlet />

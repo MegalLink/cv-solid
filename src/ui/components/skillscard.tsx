@@ -1,5 +1,6 @@
 import { type Component, createSignal } from "solid-js";
 import type { JSX } from "solid-js";
+import { cn } from "../../lib/utils";
 
 const styles = `
   .flip-card {
@@ -42,6 +43,7 @@ interface SkillCardProps {
   icon: JSX.Element;
   title: string;
   skills: string[];
+  textColorClass?: string;
 }
 
 const SkillCard: Component<SkillCardProps> = (props) => {
@@ -57,15 +59,15 @@ const SkillCard: Component<SkillCardProps> = (props) => {
       onMouseLeave={() => setIsFlipped(false)}
     >
       <div class="flip-card-inner" classList={{ 'is-flipped': isFlipped() }}>
-        <div class="flip-card-front bg-secondary p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+        <div class="flip-card-front neumorphic p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
           {props.icon}
-          <h3 class="text-xl font-semibold text-secondary-foreground">{props.title}</h3>
+          <h3 class={cn("text-xl font-semibold", props.textColorClass || 'text-foreground')}>{props.title}</h3>
         </div>
-        <div class="flip-card-back bg-secondary p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
-          <h3 class="text-xl font-semibold text-secondary-foreground mb-2">{props.title}</h3>
+        <div class="flip-card-back neumorphic p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4">
+          <h3 class={cn("text-xl font-semibold mb-2", props.textColorClass || 'text-foreground')}>{props.title}</h3>
           <ul class="list-none p-0 m-0">
             {props.skills.map((skill) => (
-              <li class="text-secondary-foreground/80">{skill}</li>
+              <li class={cn(props.textColorClass || 'text-foreground', "opacity-80")}>{skill}</li>
             ))}
           </ul>
         </div>
