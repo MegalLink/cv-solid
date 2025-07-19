@@ -3,31 +3,31 @@
 @theme {
   --font-sans: 'Poppins', sans-serif;
   --color-primary: #F59E0B;  /* Vibrant orange */
-  --color-primary-foreground: #FFFBEB;  /* Light cream for text on orange */
+  --color-primary-foreground: #1E1B18;  /* Dark text on orange */
   --color-secondary: #2563EB;  /* Rich blue */
-  --color-secondary-foreground: #EFF6FF;  /* Light blue for text on secondary */
+  --color-secondary-foreground: #EFF6FF;  /* Light text on blue */
   --color-destructive: #DC2626;  /* Strong red */
-  --color-destructive-foreground: #FEE2E2;  /* Light red for text */
-  --color-accent: #91ecce;  /* Emerald green */
-  --color-accent-foreground: #ECFDF5;  /* Light green for text */
-  --color-background: #FFFFFF;  /* Pure white */
-  --color-foreground: #1F2937;  /* Dark gray for text */
-  --color-border: #E5E7EB;  /* Light gray border */
+  --color-destructive-foreground: #FEE2E2;  /* Light text on red */
+  --color-accent: #10B981;  /* Emerald green */
+  --color-accent-foreground: #ECFDF5;  /* Light text on green */
+  --color-background: rgba(255, 255, 255, 0.8);  /* Semi-transparent white */
+  --color-foreground: #2D3748;  /* Warm dark gray for better contrast */
+  --color-border: rgba(209, 213, 219, 0.5);  /* Subtle border */
 }
 
 .dark {
   --font-sans: 'Poppins', sans-serif;
-  --color-primary: #F59E0B;  /* Brighter orange for dark mode */
-  --color-primary-foreground: #1E1B18;  /* Dark background for orange text */
-  --color-secondary: rgb(59, 130, 246);  /* Brighter blue for dark mode */
-  --color-secondary-foreground: rgb(239, 246, 255);  /* Light blue for text */
+  --color-primary: #FBBF24;  /* Brighter orange for dark mode */
+  --color-primary-foreground: #1E1B18;  /* Dark text on orange */
+  --color-secondary: #3B82F6;  /* Brighter blue for dark mode */
+  --color-secondary-foreground: #EFF6FF;  /* Light text on blue */
   --color-destructive: #EF4444;  /* Brighter red for dark mode */
-  --color-destructive-foreground: #1E1B18;  /* Dark for text on red */
-  --color-accent: #35f1b2;  /* Same green as light mode */
-  --color-accent-foreground: #1E1B18;  /* Dark for text on green */
-  --color-background: rgb(15, 23, 42);  /* Deep navy blue */
-  --color-foreground: #E2E8F0;  /* Light gray for text */
-  --color-border: #334155;  /* Darker gray border */
+  --color-destructive-foreground: #FEE2E2;  /* Light text on red */
+  --color-accent: #34D399;  /* Brighter green for dark mode */
+  --color-accent-foreground: #ECFDF5;  /* Light text on green */
+  --color-background: rgba(17, 24, 39, 0.8);  /* Semi-transparent dark */
+  --color-foreground: #F7FAFC;  /* Slightly warmer light gray for dark mode */
+  --color-border: rgba(55, 65, 81, 0.5);  /* Subtle border for dark mode */
 }
 
 /* Custom scrollbar */
@@ -61,11 +61,15 @@ body{
     no-repeat center center/cover;
 }
 
-.glassify{
+.glassify {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 0.5rem; 
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.125)
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background-color: rgba(255, 236, 236, 0.356);
+}
+
+.dark .glassify {
+    background-color: rgba(7, 36, 97, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }

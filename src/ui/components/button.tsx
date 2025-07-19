@@ -9,14 +9,14 @@ const buttonVariants = tv({
   variants: {
     variant: {
       default:
-        "bg-primary text-primary-foreground",
+        "bg-primary/90 text-secondary-foreground hover:bg-primary/60",
       destructive:
-        "bg-destructive text-destructive-foreground",
+        "bg-destructive text-destructive-foreground hover:bg-destructive/60",
       outline:
         "border-none bg-background text-foreground",
       secondary:
-        "bg-secondary text-secondary-foreground",
-      ghost: "hover:bg-accent hover:text-accent-foreground",
+        "bg-secondary/50 text-secondary-foreground hover:bg-secondary/30",
+      ghost: "hover:bg-secondary text-secondary-foreground",
       link: "text-primary underline-offset-4 hover:underline",
     },
     size: {

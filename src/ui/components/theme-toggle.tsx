@@ -71,15 +71,15 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      class="rounded-full"
+      class="rounded-full hover:bg-transparent"
       onClick={cycleTheme}
       title={`Switch to ${effectiveTheme() === "dark" ? "light" : "dark"} mode`}
     >
       <Show
         when={effectiveTheme() === "dark"}
-        fallback={<Sun class="w-5 h-5 text-foreground" />}
+        fallback={<Sun class="w-5 h-5 text-foreground hover:text-primary" />}
       >
-        <Moon class="w-5 h-5 text-foreground" />
+        <Moon class="w-5 h-5 text-foreground hover:text-primary" />
       </Show>
     </Button>
   );

@@ -8,18 +8,18 @@ import DesktopNav from "./ui/components/desktopnav";
 function App() {
   const location = useLocation();
   return (
-    <div class="min-h-screen text-foreground pb-20 md:pb-0 font-sans">
-      <div class="container mx-auto h-full md:h-screen md:py-8">
-                <div class="flex flex-col md:flex-row gap-8 md:items-stretch md:h-full">
+    <div class="min-h-screen text-foreground pb-10 lg:pb-0 font-sans">
+      <div class="lg:mx-auto w-full h-full lg:h-screen lg:p-8">
+        <div class="flex flex-col lg:flex-row gap-8 lg:items-stretch lg:h-full">
           <Sidebar />
-          <main class="flex-1 w-full p-4 md:p-8 rounded-2xl md:relative glassify">
+          <main class="flex-1 lg:p-8 lg:rounded-2xl lg:relative glassify">
             {/* Mobile View: Simple scrollable container */}
-            <div class="block md:hidden overflow-y-auto">
+            <div class="block lg:hidden overflow-y-auto">
               <Outlet />
             </div>
 
             {/* Desktop View: Animated container */}
-            <div class="hidden md:block">
+            <div class="hidden lg:block">
               <Presence exitBeforeEnter>
                 <For each={[location().state.key]}>
                   {() => (

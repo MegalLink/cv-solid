@@ -4,7 +4,6 @@ import { cn } from "../../lib/utils";
 
 const styles = `
   .flip-card {
-    background-color: transparent;
     width: 100%;
     height: 180px;
     perspective: 1000px;
@@ -16,6 +15,8 @@ const styles = `
     width: 100%;
     height: 100%;
     text-align: center;
+    background-color: color-mix(in srgb, var(--color-secondary) 40%, transparent);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.6s;
     transform-style: preserve-3d;
   }
@@ -59,12 +60,12 @@ const SkillCard: Component<SkillCardProps> = (props) => {
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
-      <div class="flip-card-inner" classList={{ 'is-flipped': isFlipped() }}>
-        <div class={cn("flip-card-front p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4", props.bgColorClass || 'bg-transparent')}>
+      <div class="flip-card-inner rounded-lg" classList={{ 'is-flipped': isFlipped() }}>
+        <div class={cn("flip-card-front p-6 text-center flex flex-col items-center justify-center gap-4")}>
           {props.icon}
           <h3 class={cn("text-xl font-semibold", props.textColorClass || 'text-primary-foreground')}>{props.title}</h3>
         </div>
-        <div class={cn("flip-card-back p-6 rounded-lg text-center flex flex-col items-center justify-center gap-4", props.bgColorClass || 'bg-transparent')}>
+        <div class={cn("flip-card-back p-6 text-center flex flex-col items-center justify-center gap-4")}>
           <h3 class={cn("text-xl font-semibold mb-2", props.textColorClass || 'text-primary-foreground')}>{props.title}</h3>
           <ul class="list-none p-0 m-0">
             {props.skills.map((skill) => (
