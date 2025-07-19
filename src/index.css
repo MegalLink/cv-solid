@@ -13,26 +13,59 @@
   --color-background: #FFFFFF;  /* Pure white */
   --color-foreground: #1F2937;  /* Dark gray for text */
   --color-border: #E5E7EB;  /* Light gray border */
-
-
 }
 
 .dark {
   --font-sans: 'Poppins', sans-serif;
   --color-primary: #F59E0B;  /* Brighter orange for dark mode */
   --color-primary-foreground: #1E1B18;  /* Dark background for orange text */
-  --color-secondary: #3B82F6;  /* Brighter blue for dark mode */
-  --color-secondary-foreground: #EFF6FF;  /* Light blue for text */
+  --color-secondary: rgb(59, 130, 246);  /* Brighter blue for dark mode */
+  --color-secondary-foreground: rgb(239, 246, 255);  /* Light blue for text */
   --color-destructive: #EF4444;  /* Brighter red for dark mode */
   --color-destructive-foreground: #1E1B18;  /* Dark for text on red */
   --color-accent: #35f1b2;  /* Same green as light mode */
   --color-accent-foreground: #1E1B18;  /* Dark for text on green */
-  --color-background: #0F172A;  /* Deep navy blue */
+  --color-background: rgb(15, 23, 42);  /* Deep navy blue */
   --color-foreground: #E2E8F0;  /* Light gray for text */
   --color-border: #334155;  /* Darker gray border */
-
-
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-secondary);
+}
+
+body{
+   background: url('https://images.unsplash.com/photo-1503264116251-35a269479413')
+    no-repeat center center/cover;
+   scrollbar-width: thin;
+   scrollbar-color: var(--color-primary) transparent;
+}
+
+.dark body{
+   background: url('https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?q=80&w=2072')
+    no-repeat center center/cover;
+}
+
+.glassify{
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.5rem; 
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125)
+}

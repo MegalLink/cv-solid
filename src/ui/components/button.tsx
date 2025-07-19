@@ -9,13 +9,13 @@ const buttonVariants = tv({
   variants: {
     variant: {
       default:
-        "bg-primary text-primary-foreground neumorphic-button",
+        "bg-primary text-primary-foreground",
       destructive:
-        "bg-destructive text-destructive-foreground neumorphic-button",
+        "bg-destructive text-destructive-foreground",
       outline:
-        "border-none bg-background text-foreground neumorphic-button",
+        "border-none bg-background text-foreground",
       secondary:
-        "bg-secondary text-secondary-foreground neumorphic-button",
+        "bg-secondary text-secondary-foreground",
       ghost: "hover:bg-accent hover:text-accent-foreground",
       link: "text-primary underline-offset-4 hover:underline",
     },

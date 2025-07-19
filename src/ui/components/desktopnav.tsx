@@ -4,7 +4,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const DesktopNav = () => {
   return (
-        <nav class="hidden lg:flex flex-col items-center justify-center gap-4 p-4 bg-card rounded-2xl shadow-lg">
+        <nav class="hidden lg:flex flex-col items-center justify-center gap-4 p-4 bg-card rounded-2xl shadow-lg glassify">
       <ThemeToggle />
 
       <div class="flex flex-col gap-2 my-4">

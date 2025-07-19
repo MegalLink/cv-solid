@@ -3,24 +3,24 @@ import {  Github, Linkedin, Mail, FileText } from "lucide-solid";
 
 const Sidebar = () => {
   return (
-        <aside class="hidden lg:flex flex-col w-80 bg-primary text-primary-foreground p-8 rounded-2xl justify-center">
+        <aside class="hidden lg:flex flex-col w-80 text-primary-foreground p-8 rounded-2xl justify-center glassify">
       <div class="flex flex-col items-center text-center">
         <img
           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
           alt="Jeferson Narváez"
           class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-primary-foreground/50"
         />
-        <h1 class="text-2xl font-bold">Jeferson Narváez</h1>
-        <p class="text-md text-primary-foreground/80">Desarrollador Web</p>
+        <h1 class="text-2xl font-bold text-foreground">Jeferson Narváez</h1>
+        <p class="text-md text-primary">Desarrollador Web</p>
       </div>
       <div class="flex justify-center gap-4 my-6">
-        <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground">
+        <a href="#" class="text-foreground hover:text-primary-foreground">
           <Github class="w-6 h-6" />
         </a>
-        <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground">
+        <a href="#" class="text-foreground hover:text-primary-foreground">
           <Linkedin class="w-6 h-6" />
         </a>
-        <a href="#" class="text-primary-foreground/80 hover:text-primary-foreground">
+        <a href="#" class="text-foreground hover:text-primary-foreground">
           <Mail class="w-6 h-6" />
         </a>
       </div>

@@ -5,7 +5,7 @@ const Card: Component<ComponentProps<"div">> = (props) => {
   const [local, rest] = splitProps(props, ["class"]);
   return (
     <div
-      class={cn("rounded-lg text-card-foreground neumorphic", local.class)}
+      class={cn("rounded-lg text-card-foreground", local.class)}
       {...rest}
     />
   );

@@ -24,24 +24,28 @@ const Home = () => {
             title="UI/UX Design" 
             skills={["Figma", "Adobe XD", "User Research"]} 
             textColorClass="text-primary"
+            bgColorClass="bg-secondary"
           />
           <SkillCard 
-            icon={<Code class="w-12 h-12 text-secondary" />} 
+            icon={<Code class="w-12 h-12 text-primary" />} 
             title="Frontend Dev" 
             skills={["ReactJS", "SolidJS", "VueJS", "TailwindCSS"]} 
-            textColorClass="text-secondary"
+            textColorClass="text-primary"
+            bgColorClass="bg-secondary"
           />
           <SkillCard 
-            icon={<Briefcase class="w-12 h-12 text-accent" />} 
+            icon={<Briefcase class="w-12 h-12 text-primary" />} 
             title="Backend Dev" 
             skills={["Node.js", "Express", "NestJS", "GraphQL"]} 
-            textColorClass="text-accent"
+            textColorClass="text-primary"
+            bgColorClass="bg-secondary"
           />
           <SkillCard 
-            icon={<Database class="w-12 h-12 text-destructive" />} 
+            icon={<Database class="w-12 h-12 text-primary" />} 
             title="Databases" 
             skills={["PostgreSQL", "MongoDB", "MySQL", "Redis"]} 
-            textColorClass="text-destructive"
+            textColorClass="text-primary"
+            bgColorClass="bg-secondary"
           />
         </div>
       </section>
