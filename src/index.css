@@ -2,30 +2,30 @@
 
 @theme {
   --font-sans: InterVariable, sans-serif;
-  --color-primary: oklch(0.55 0.22 260);
-  --color-primary-foreground: oklch(0.98 0.02 260);
-  --color-secondary: oklch(0.92 0.05 280);
-  --color-secondary-foreground: oklch(0.25 0.15 280);
-  --color-destructive: oklch(0.65 0.25 15);
-  --color-destructive-foreground: oklch(0.98 0.02 15);
-  --color-accent: oklch(0.88 0.12 180);
-  --color-accent-foreground: oklch(0.22 0.18 180);
-  --color-background: oklch(0.98 0.01 280);
-  --color-foreground: oklch(0.18 0.12 280);
-  --color-border: oklch(0.85 0.06 280);
+  --color-primary: #F59E0B;  /* Vibrant orange */
+  --color-primary-foreground: #FFFBEB;  /* Light cream for text on orange */
+  --color-secondary: #2563EB;  /* Rich blue */
+  --color-secondary-foreground: #EFF6FF;  /* Light blue for text on secondary */
+  --color-destructive: #DC2626;  /* Strong red */
+  --color-destructive-foreground: #FEE2E2;  /* Light red for text */
+  --color-accent: #91ecce;  /* Emerald green */
+  --color-accent-foreground: #ECFDF5;  /* Light green for text */
+  --color-background: #FFFFFF;  /* Pure white */
+  --color-foreground: #1F2937;  /* Dark gray for text */
+  --color-border: #E5E7EB;  /* Light gray border */
 }
 
 .dark {
   --font-sans: InterVariable, sans-serif;
-  --color-primary: oklch(0.75 0.18 260);
-  --color-primary-foreground: oklch(0.12 0.15 280);
-  --color-secondary: oklch(0.25 0.08 280);
-  --color-secondary-foreground: oklch(0.92 0.05 280);
-  --color-destructive: oklch(0.75 0.20 15);
-  --color-destructive-foreground: oklch(0.12 0.10 15);
-  --color-accent: oklch(0.35 0.15 180);
-  --color-accent-foreground: oklch(0.88 0.12 180);
-  --color-background: oklch(0.12 0.08 280);
-  --color-foreground: oklch(0.92 0.05 280);
-  --color-border: oklch(0.30 0.10 280);
+  --color-primary: #F59E0B;  /* Brighter orange for dark mode */
+  --color-primary-foreground: #1E1B18;  /* Dark background for orange text */
+  --color-secondary: #3B82F6;  /* Brighter blue for dark mode */
+  --color-secondary-foreground: #EFF6FF;  /* Light blue for text */
+  --color-destructive: #EF4444;  /* Brighter red for dark mode */
+  --color-destructive-foreground: #1E1B18;  /* Dark for text on red */
+  --color-accent: #35f1b2;  /* Same green as light mode */
+  --color-accent-foreground: #1E1B18;  /* Dark for text on green */
+  --color-background: #0F172A;  /* Deep navy blue */
+  --color-foreground: #E2E8F0;  /* Light gray for text */
+  --color-border: #334155;  /* Darker gray border */
 }

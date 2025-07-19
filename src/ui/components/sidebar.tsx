@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, FileText } from "lucide-solid";
 
 const Sidebar = () => {
   return (
-        <aside class="hidden md:flex flex-col w-80 bg-primary text-primary-foreground p-8 rounded-2xl justify-center">
+        <aside class="hidden lg:flex flex-col w-80 bg-primary text-primary-foreground p-8 rounded-2xl justify-center">
       <div class="flex flex-col items-center text-center">
         <img
           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"

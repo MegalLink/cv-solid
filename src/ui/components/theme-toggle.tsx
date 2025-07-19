@@ -1,4 +1,5 @@
-import { createSignal, onMount } from "solid-js";
+import { createSignal, onMount, Show } from "solid-js";
+import { Moon, Sun } from "lucide-solid";
 import { Button } from "./button";
 
 type Theme = "light" | "dark" | "system";
@@ -32,14 +33,9 @@ export function ThemeToggle() {
   const [theme, setTheme] = createSignal<Theme>("system");
 
   const cycleTheme = () => {
-    const currentTheme = theme();
-    const nextTheme: Theme =
-      currentTheme === "light"
-        ? "dark"
-        : currentTheme === "dark"
-        ? "system"
-        : "light";
-
+    const currentEffectiveTheme =
+      theme() === "system" ? getSystemTheme() : theme();
+    const nextTheme = currentEffectiveTheme === "light" ? "dark" : "light";
     updateTheme(nextTheme);
   };
 
@@ -47,28 +43,6 @@ export function ThemeToggle() {
     setTheme(newTheme);
     storeTheme(newTheme);
     applyTheme(newTheme);
-  };
-
-  const getThemeIcon = (currentTheme: Theme): string => {
-    switch (currentTheme) {
-      case "light":
-        return "☀️";
-      case "dark":
-        return "🌙";
-      case "system":
-        return "💻";
-    }
-  };
-
-  const getThemeLabel = (currentTheme: Theme): string => {
-    switch (currentTheme) {
-      case "light":
-        return "Light";
-      case "dark":
-        return "Dark";
-      case "system":
-        return "System";
-    }
   };
 
   onMount(() => {
@@ -90,15 +64,23 @@ export function ThemeToggle() {
     };
   });
 
+  const effectiveTheme = () =>
+    theme() === "system" ? getSystemTheme() : theme();
+
   return (
     <Button
       variant="ghost"
-      size="sm"
+      size="icon"
+      class="rounded-full"
       onClick={cycleTheme}
-      title={`Current theme: ${getThemeLabel(theme())}`}
+      title={`Switch to ${effectiveTheme() === "dark" ? "light" : "dark"} mode`}
     >
-      <span class="mr-2">{getThemeIcon(theme())}</span>
-      {getThemeLabel(theme())}
+      <Show
+        when={effectiveTheme() === "dark"}
+        fallback={<Sun class="w-5 h-5 text-foreground" />}
+      >
+        <Moon class="w-5 h-5 text-foreground" />
+      </Show>
     </Button>
   );
 }
