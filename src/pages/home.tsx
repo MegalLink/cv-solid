@@ -13,7 +13,7 @@ const Home = () => {
         <p class="text-lg md:text-xl text-foreground/80 mb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <Button variant="default" size="lg">Contact Me</Button>
+        <Button variant="secondary" size="lg">Contact Me</Button>
       </header>
 
       <section class="w-full max-w-5xl mt-16">

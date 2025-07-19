@@ -5,7 +5,7 @@ import { tv, type VariantProps } from "tailwind-variants";
 import { cn } from "../lib/utils";
 
 const buttonVariants = tv({
-  base: "inline-flex items-center justify-center rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  base: "inline-flex items-center justify-center rounded-md text-sm font-medium cursor-pointer",
   variants: {
     variant: {
       default:
@@ -41,29 +41,16 @@ export interface ButtonProps
  */
 const Button: Component<ButtonProps> = (props) => {
   const [local, rest] = splitProps(props, ["class", "variant", "size"]);
+
+
   return (
-    <>
-      <style>
-        {`
-          .neumorphic-button {
-            box-shadow: 5px 5px 10px var(--shadow-dark), -5px -5px 10px var(--shadow-light);
-          }
-          .neumorphic-button:hover {
-            box-shadow: 7px 7px 14px var(--shadow-dark), -7px -7px 14px var(--shadow-light);
-          }
-          .neumorphic-button:active {
-            box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
-          }
-        `}
-      </style>
-      <ButtonPrimitive
-        class={cn(
-          buttonVariants({ variant: local.variant, size: local.size }),
-          local.class
-        )}
-        {...rest}
-      />
-    </>
+    <ButtonPrimitive
+      class={cn(
+        buttonVariants({ variant: local.variant, size: local.size }),
+        local.class
+      )}
+      {...rest}
+    />
   );
 };
 

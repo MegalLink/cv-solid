@@ -3,7 +3,7 @@ import {  Github, Linkedin, Mail, FileText } from "lucide-solid";
 
 const Sidebar = () => {
   return (
-        <aside class="hidden lg:flex flex-col w-80 bg-primary text-primary-foreground p-8 rounded-2xl justify-center shadow-neumorphic">
+        <aside class="hidden lg:flex flex-col w-80 bg-primary text-primary-foreground p-8 rounded-2xl justify-center">
       <div class="flex flex-col items-center text-center">
         <img
           src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1888&auto=format&fit=crop"
@@ -24,7 +24,7 @@ const Sidebar = () => {
           <Mail class="w-6 h-6" />
         </a>
       </div>
-      <Button variant="secondary" size="lg" class="flex items-center gap-2">
+      <Button variant="default" size="lg" class="flex items-center gap-2">
         <FileText class="w-5 h-5" />
         Descargar CV
       </Button>
