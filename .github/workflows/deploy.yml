@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
           
       - name: Setup Pages
@@ -39,12 +39,15 @@ jobs:
         
       - name: Install dependencies
         run: npm ci
-        
-      - name: Build project
+        - name: Build project
         run: npm run build
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          NODE_ENV: production
+          
+      - name: List build output
+        run: ls -la dist/
           
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
