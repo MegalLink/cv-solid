@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [solid(), tailwindcss()],
-  base: '/cv-solid/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
