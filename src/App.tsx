@@ -8,13 +8,13 @@ import DesktopNav from "./ui/components/desktopnav";
 function App() {
   const location = useLocation();
   return (
-    <div class="min-h-screen text-foreground pb-10 lg:pb-0 font-sans">
-      <div class="lg:mx-auto w-full h-full lg:h-screen lg:p-8">
-        <div class="flex flex-col lg:flex-row gap-8 lg:items-stretch lg:h-full">
+    <div class="h-screen  text-foreground pb-10 lg:pb-0 font-sans">
+      <div class="lg:mx-auto  w-full h-full lg:h-screen lg:p-8">
+        <div class="flex flex-col lg:flex-row gap-8 lg:items-stretch h-full">
           <Sidebar />
           <main class="flex-1 lg:p-8 lg:rounded-2xl lg:relative glassify">
             {/* Mobile View: Simple scrollable container */}
-            <div class="block lg:hidden overflow-y-auto">
+            <div class="block lg:hidden overflow-y-auto pb-12">
               <Outlet />
             </div>
 

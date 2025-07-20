@@ -11,16 +11,16 @@ const Sidebar = () => {
           class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-primary-foreground/50"
         />
         <h1 class="text-2xl font-bold text-foreground">Jeferson Narváez</h1>
-        <p class="text-md text-primary">Desarrollador Web</p>
+        <p class="text-md text-primary">Software Developer</p>
       </div>
       <div class="flex justify-center gap-4 my-6">
-        <a href="#" class="text-foreground hover:text-primary-foreground">
+        <a href="https://github.com/MegalLink" class="text-foreground hover:text-primary-foreground">
           <Github class="w-6 h-6" />
         </a>
-        <a href="#" class="text-foreground hover:text-primary-foreground">
+        <a href="https://www.linkedin.com/in/jeferson-narvaez-553b90148/" class="text-foreground hover:text-primary-foreground">
           <Linkedin class="w-6 h-6" />
         </a>
-        <a href="#" class="text-foreground hover:text-primary-foreground">
+        <a href="mailto:jeferson.narvaez.dev@gmail.com" class="text-foreground hover:text-primary-foreground">
           <Mail class="w-6 h-6" />
         </a>
       </div>

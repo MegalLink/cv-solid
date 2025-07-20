@@ -56,17 +56,21 @@ body {
    scrollbar-width: thin;
    scrollbar-color: var(--color-primary) transparent;
    background-attachment: fixed;
-   /* Precargar la imagen oscura */
 }
 
+/* Preload dark mode background */
 body::after {
   content: '';
   position: fixed;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
   z-index: -1;
   background: url('/src/assets/images/dark.avif') no-repeat center center/cover;
+  background-attachment: fixed;
 }
 
 .dark body {

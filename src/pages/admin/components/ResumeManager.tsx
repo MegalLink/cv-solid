@@ -228,11 +228,11 @@ export default function ResumeManager() {
         <resumeForm.Field name="title">
           {(field) => (
             <div class="space-y-2">
-              <label for="title" class="block text-sm font-medium text-foreground">
+              <label for="resume-title" class="block text-sm font-medium text-foreground">
                 Title <span class="text-destructive">*</span>
               </label>
               <input
-                id="title"
+                id="resume-title"
                 name="title"
                 value={field().state.value}
                 onBlur={field().handleBlur}
@@ -248,11 +248,11 @@ export default function ResumeManager() {
         <resumeForm.Field name="place_name">
           {(field) => (
             <div class="space-y-2">
-              <label for="place_name" class="block text-sm font-medium text-foreground">
+              <label for="resume-place-name" class="block text-sm font-medium text-foreground">
                 {activeTab() === 'experience' ? 'Company' : 'Institution'} Name <span class="text-destructive">*</span>
               </label>
               <input
-                id="place_name"
+                id="resume-place-name"
                 name="place_name"
                 value={field().state.value}
                 onBlur={field().handleBlur}
@@ -269,12 +269,12 @@ export default function ResumeManager() {
           <resumeForm.Field name="from_date">
             {(field) => (
               <div class="space-y-2">
-                <label for="from_date" class="block text-sm font-medium text-foreground">
+                <label for="resume-from-date" class="block text-sm font-medium text-foreground">
                   From Date <span class="text-destructive">*</span>
                 </label>
                 <input
                   type="date"
-                  id="from_date"
+                  id="resume-from-date"
                   name="from_date"
                   value={field().state.value}
                   onBlur={field().handleBlur}
@@ -290,12 +290,12 @@ export default function ResumeManager() {
           <resumeForm.Field name="to_date">
             {(field) => (
               <div class="space-y-2">
-                <label for="to_date" class="block text-sm font-medium text-foreground">
+                <label for="resume-to-date" class="block text-sm font-medium text-foreground">
                   To Date (leave empty for current)
                 </label>
                 <input
                   type="date"
-                  id="to_date"
+                  id="resume-to-date"
                   name="to_date"
                   value={field().state.value || ''}
                   onBlur={field().handleBlur}
@@ -310,11 +310,11 @@ export default function ResumeManager() {
         <resumeForm.Field name="description">
           {(field) => (
             <div class="space-y-2">
-              <label for="description" class="block text-sm font-medium text-foreground">
+              <label for="resume-description" class="block text-sm font-medium text-foreground">
                 Description
               </label>
               <textarea
-                id="description"
+                id="resume-description"
                 name="description"
                 rows={4}
                 value={field().state.value || ''}
@@ -373,11 +373,11 @@ export default function ResumeManager() {
         <skillsForm.Field name="category">
           {(field) => (
             <div class="space-y-2">
-              <label for="category" class="block text-sm font-medium text-foreground">
+              <label for="skills-category" class="block text-sm font-medium text-foreground">
                 Category <span class="text-destructive">*</span>
               </label>
               <input
-                id="category"
+                id="skills-category"
                 name="category"
                 value={field().state.value}
                 onBlur={field().handleBlur}
@@ -393,11 +393,11 @@ export default function ResumeManager() {
         <skillsForm.Field name="skill_name">
           {(field) => (
             <div class="space-y-2">
-              <label for="skill_name" class="block text-sm font-medium text-foreground">
+              <label for="skills-skill-name" class="block text-sm font-medium text-foreground">
                 Skill Name <span class="text-destructive">*</span>
               </label>
               <input
-                id="skill_name"
+                id="skills-skill-name"
                 name="skill_name"
                 value={field().state.value}
                 onBlur={field().handleBlur}
