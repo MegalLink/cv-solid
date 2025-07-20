@@ -118,6 +118,7 @@ const routeTree = rootRoute.addChildren([
 
 export const router = createRouter({ 
   routeTree,
+  basepath: '/cv-solid',
   defaultPreload: 'intent',
   defaultPreloadStaleTime: 0,
 });
