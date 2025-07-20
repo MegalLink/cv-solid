@@ -25,8 +25,10 @@ ALTER TABLE public.resume_information ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.skills ENABLE ROW LEVEL SECURITY;
 
 -- Create RLS policies for resume_information
-CREATE POLICY "Enable read access for all users" ON public.resume_information
-  FOR SELECT USING (true);
+CREATE POLICY "Allow public read access" ON public.resume_information
+  FOR SELECT
+  TO anon, authenticated
+  USING (true);
 
 CREATE POLICY "Enable insert for authenticated users" ON public.resume_information
   FOR INSERT TO authenticated WITH CHECK (true);
@@ -38,8 +40,10 @@ CREATE POLICY "Enable delete for authenticated users" ON public.resume_informati
   FOR DELETE TO authenticated USING (true);
 
 -- Create RLS policies for skills
-CREATE POLICY "Enable read access for all users" ON public.skills
-  FOR SELECT USING (true);
+CREATE POLICY "Allow public read access" ON public.skills
+  FOR SELECT
+  TO anon, authenticated
+  USING (true);
 
 CREATE POLICY "Enable insert for authenticated users" ON public.skills
   FOR INSERT TO authenticated WITH CHECK (true);
