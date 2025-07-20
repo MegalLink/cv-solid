@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [solid(), tailwindcss()],
-  base: '/cv-solid/', // Set base path for GitHub Pages
+  base: '/', // Use root path since it's working at megallink.github.io/
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
